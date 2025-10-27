@@ -5,7 +5,7 @@ const getAPIBaseURL = () => {
     // render에 배포할 때 환경 변수에 접근하면 HOST 이름만 리턴한다.
     const fastApiHost = import.meta.env.VITE_FASTAPI_HOST;
 
-    if (fastApiHost.startWith('http')) {
+    if (fastApiHost.startsWith('http')) {
         // 로컬 환경 ex) http://localhost:8000
         return fastApiHost;
     }
